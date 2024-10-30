@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase Bank Login</title>
+    <link rel="stylesheet" href="login 2.css">
+    <script>
+        function redirectToHome(event) {
+            event.preventDefault(); // Prevents the form from submitting traditionally
+            window.location.href = "test 2.html"; // Replace with the actual path to your home page
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="chase-logo.svg" alt="Chase Logo">
+        </div>
+        <form class="login-form" onsubmit="redirectToHome(event)">
+            <input type="text" placeholder="Enter your username" required>
+            <input type="password" placeholder="Enter your password" required>
+            <div class="options">
+                <label>
+                    <input type="checkbox" checked> Remember me
+                </label>
+                <label>
+                    <input type="checkbox"> Use token
+                </label>
+            </div>
+            <button type="submit">Sign in</button>
+            <div class="links">
+                <a href="#">Forgot username or password?</a>
+                <a href="#">Sign up</a> | 
+                <a href="#">Open an account</a> | 
+                <a href="#">Privacy</a>
+            </div>
+        </form>
+        <footer>
+            <p>Equal Housing Lender<br>
+            Deposit products provided by JPMorgan Chase Bank, N.A. Member FDIC<br>
+            Credit cards are issued by JPMorgan Chase Bank, N.A. Member FDIC<br>
+            &copy; 2023 JPMorgan Chase & Co.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Bank Login</title>
+    <link rel="stylesheet" href="Test.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0056b3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 375px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 120px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        .options label {
+            font-size: 14px;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #003f88;
+        }
+        .create-account {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .create-account a {
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .create-account a:hover {
+            text-decoration: underline;
+        }
+        .disclosures {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-content">
+            <div class="logo">
+                <img src="download (1).png" alt="Chase Logo">
+            </div>
+            <form class="login-form">
+                <input type="text" placeholder="Enter your username" required>
+                <input type="password" placeholder="Enter your password" required>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" checked> Remember me
+                    </label>
+                    <label>
+                        <input type="checkbox"> Use token
+                    </label>
+                </div>
+                <button type="submit">Sign in</button>
+                <a href="#" class="forgot-password">Forgot username or password?</a>
+            </form>
+            <div class="links">
+                <a href="#">Sign up</a>
+                <a href="#">Open an account</a>
+                <a href="#">Privacy</a>
+            </div>
+            <footer class="legal-info">
+                <p>🏡 Equal Housing Lender</p>
+                <p>Deposit products provided by JPMorgan Chase Bank, N.A. Member FDIC</p>
+                <p>Credit cards are issued by JPMorgan Chase Bank, N.A. Member FDIC</p>
+                <p>© 2023 JPMorgan Chase & Co.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Redirect to home.html
+            window.location.href = 'test 2.html';
+        });
+    </script>
+</body>
+</html>

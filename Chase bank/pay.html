@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="test 2.css">
+</head>
+<body>
+        <!-- Bank Card -->
+        <div class="card">
+            <h1>Payments</h1>
+        </div>
+    
+        <!-- Accounts Section -->
+    <div class="accounts">
+        <div class="account-item">
+            <div class="balance-info">
+                <p>Available Balance</p>
+                <h2>$300,000,000.00</h2>
+            </div>
+        </div>
+        <div class="account-item">
+            <div class="last-payment-info">
+                <p>Last Payment</p>
+                <h3>$1,500.00 on Oct 28, 2024</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="activity">
+        <!-- Payment Options Section -->
+        <section class="payment-options">
+            <h2>Make a Payment</h2>
+            <form>
+                <label for="account">Select Account:</label>
+                <select id="account">
+                    <option>Checking Account</option>
+                    <option>Savings Account</option>
+                </select>
+                <label for="recipient-account">Recipient Account:</label>
+                <input type="text" id="recipient-account" placeholder="Enter recipient's account number">
+                <label for="recipient-name">Recipient Name:</label>
+                <input type="text" id="recipient-name" placeholder="Enter recipient's name">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="$0.00">
+                <label for="date">Payment Date:</label>
+                <input type="date" id="date">
+                <button type="button" class="pay-btn" onclick="submitPayment()">Submit Payment</button>
+            </form>
+        </section>
+    </div>
+
+    <!--
+    <div class="activity">
+         Transaction History Section 
+        <section class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul>
+                <li>
+                    <span>Oct 28, 2023</span>
+                    <span>$1,500.00</span>
+                    <span>Paid to Electric Company</span>
+                </li>
+                <li>
+                    <span>Oct 25, 2024</span>
+                    <span>$1,000.00</span>
+                    <span>Paid to Water Service</span>
+                </li>
+            </ul>
+        </section>
+    </div>-->
+
+    <footer>
+        <p>Equal Housing Lender<br>
+        Deposit products provided by JPMorgan Chase Bank, N.A. Member FDIC<br>
+        Credit cards are issued by JPMorgan Chase Bank, N.A. Member FDIC<br>
+        &copy; 2024 JPMorgan Chase & Co.</p>
+    </footer>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item" onclick="location.href='test%202.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="nav-icon" fill="#1e3a8a">
+                    <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                </svg>
+                <span style="color: #1e3a8a">Home</span>
+            </div>        
+            <div class="nav-item" onclick="location.href='pay.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="nav-icon" fill="#1e3a8a">
+                    <path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8c-5.9 16.7-24.2 25.4-40.8 19.5s-25.4-24.2-19.5-40.8C55.6 150.7 73.2 122 97.6 97.6c87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 128c0 13.3-10.7 24-24 24l-8.4 0c0 0 0 0 0 0L344 224c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24l7.6 0 .7 0L168 288c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1c17.5-17.5 30.1-38 37.8-59.8c5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8c-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440l0-119.6 0-.7 0-7.6z"/>
+                </svg>
+                <span style="color: #1e3a8a">Payments</span>
+            </div>
+            <div class="nav-item" onclick="location.href='Profile settings.html'"> <!-- Updated link here -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="nav-icon" fill="#1e3a8a">
+                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+                </svg>
+                <span style="color: #1e3a8a;">Profile Settings</span>
+            </div>
+        </div>  
+    </div>
+
+    <script>
+        function submitPayment() {
+    const fromAccount = document.getElementById("account").value;
+    const toAccount = document.getElementById("recipient-account").value;
+    const name = document.getElementById("recipient-name").value;
+    const amount = document.getElementById("amount").value;
+    const date = document.getElementById("date").value;
+
+    // Basic validation
+    if (!toAccount || !name || !amount || !date) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    const url = `pay 2.html?from=${encodeURIComponent(fromAccount)}&to=${encodeURIComponent(toAccount)}&name=${encodeURIComponent(name)}&amount=${encodeURIComponent(amount)}&date=${encodeURIComponent(date)}`;
+    window.location.href = url;
+}
+
+    </script>
+</body>
+</html>

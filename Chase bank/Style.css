@@ -1,0 +1,158 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.greeting {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.header-banner {
+    background-color: #005bb5;
+    padding: 20px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bank-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Account and Activity Sections */
+.accounts, .activity {
+    padding: 15px;
+    background: #fff;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.balance {
+    font-size: 14px;
+    color: #999;
+}
+
+.account-item, .activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.account-info, .activity-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-name {
+    font-weight: bold;
+}
+
+.activity-date {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.nav-item {
+    font-size: 14px;
+    color: #0073e6;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    .greeting {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .account-item, .activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .account-info, .activity-details {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .bottom-nav {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .greeting {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .balance {
+        font-size: 12px;
+    }
+
+    .account-name {
+        font-size: 14px;
+    }
+
+    .activity-date {
+        font-size: 10px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,164 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f5;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.back-arrow {
+    margin-right: auto;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.header-title {
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e0e7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+.profile-name {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.profile-details-link {
+    color: #1e3a8a;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+/* Settings List */
+.settings-list {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.setting-item:first-child {
+    border-top: none;
+}
+
+.setting-item:hover {
+    background-color: #f9f9f9;
+}
+
+.setting-icon {
+    margin-right: 10px;
+}
+
+.logout {
+    color: #d9534f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #666;
+    width: 100%;
+}
+
+.version-info {
+    margin-bottom: 15px;
+}
+
+.bottom-nav {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.setting-item.logout {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px 15px; /* Add padding for space */
+    cursor: pointer; /* Change cursor on hover */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.setting-item.logout:hover {
+    background-color: #e2e6ea; /* Darker background on hover */
+}
+
+.setting-item.logout svg {
+    width: 24px; /* Width of the icon */
+    height: 24px; /* Height of the icon */
+    fill: green; /* Fill color of the SVG */
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.setting-item.logout span {
+    color: #333; /* Text color */
+    font-size: 16px; /* Font size */
+}
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Page</title>
+        <link rel="stylesheet" href="pay.css">
+        <link rel="stylesheet" href="test 2.css">
+        <link rel="stylesheet" href="payment.css">
+        <style>
+            /* Activity and payment options styling */
+.activity {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+        </style>
+    </head>
+    <body>
+        <!-- Bank Card -->
+    <div class="card">
+        <h1>Confirm Details</h1>
+    </div>
+    
+    <div class="activity">
+        <!-- Payment Options Section -->
+        <section class="payment-options">
+            <ul class="li_tall border_none">
+                <li class="no_arrow">
+                    <a>
+                        <ul>
+                            <li>From: <span class="transfer_money_from"></span></li>
+                            <li>Recipient Account: <span class="transfer_money_to"></span></li>
+                            <li>Recipient Name: <span class="transfer_money_name"></span></li>
+                            <li>Amount: <span class="transfer_money_amount"></span></li>
+                            <li>Payment Date: <span class="transfer_money_on_date"></span></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <!-- Moved the form outside of the ul -->
+            <div class="container-fluid border-top">
+                <form novalidate class="ng-untouched ng-pristine ng-valid">
+                    <div class="row mt-5">
+                        <div class="col-12 px-0 text-center bluish-text xxlarge-font large-line-height">
+                            <div>
+                                <span>Enter Transaction Passcode</span>
+                            </div>
+                        </div>
+                        <div class="col-12 h-centered-container mt-4">
+                            <mat-form-field class="mat-form-field wrapper-pb-0 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-star-inserted ng-touched mat-form-field-should-float ng-dirty ng-valid">
+                                <div class="mat-form-field-wrapper">
+                                    <div class="mat-form-field-flex">
+                                        <div class="mat-form-field-infix">
+                                            <input maxlength="6" matinput name="otp-input" autocomplete="off" class="mat-input-element mat-form-field-autofill-control ab-input text-center bluish-text ng-touched ng-dirty has-value ng-valid" type="password" required aria-required="true" aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    <div class="mat-form-field-underline">
+                                        <span class="mat-form-field-ripple"></span>
+                                    </div>
+                                    <div class="mat-form-field-subscript-wrapper">
+                                        <div class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages">
+                                            <div class="mat-form-field-hint-spacer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 validation-error-container"></div>
+                    </div>
+                </form>
+            </div>
+            <!-- Navigation section placed outside of ul and form sections -->
+            <div class="navigation text-center">
+                <a href="pay 3.html" class="btn">Next</a>
+            </div>
+        </section>
+        
+    </div>
+    
+    <footer>
+        <p>Equal Housing Lender<br>
+        Deposit products provided by JPMorgan Chase Bank, N.A. Member FDIC<br>
+        Credit cards are issued by JPMorgan Chase Bank, N.A. Member FDIC<br>
+        &copy; 2024 JPMorgan Chase & Co.</p>
+    </footer>
+    
+    <script>
+        window.onload = function() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Assign parameter values to elements
+    document.querySelector('.transfer_money_from').textContent = urlParams.get('from') || 'N/A';
+    document.querySelector('.transfer_money_to').textContent = urlParams.get('to') || 'N/A';
+    document.querySelector('.transfer_money_name').textContent = urlParams.get('name') || 'N/A';
+    document.querySelector('.transfer_money_amount').textContent = urlParams.get('amount') || 'N/A';
+    document.querySelector('.transfer_money_on_date').textContent = urlParams.get('date') || 'N/A';
+};
+
+    </script>
+    
+    
+    
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item" onclick="location.href='test%202.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="nav-icon" fill="#1e3a8a">
+                    <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                </svg>
+                <span style="color: #1e3a8a">Home</span>
+            </div>        
+            <div class="nav-item" onclick="location.href='pay.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="nav-icon" fill="#1e3a8a">
+                    <path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8c-5.9 16.7-24.2 25.4-40.8 19.5s-25.4-24.2-19.5-40.8C55.6 150.7 73.2 122 97.6 97.6c87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 128c0 13.3-10.7 24-24 24l-8.4 0c0 0 0 0 0 0L344 224c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24l7.6 0 .7 0L168 288c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1c17.5-17.5 30.1-38 37.8-59.8c5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8c-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440l0-119.6 0-.7 0-7.6z"/>
+                </svg>
+                <span style="color: #1e3a8a">Payments</span>
+            </div>
+            <div class="nav-item" onclick="location.href='Profile settings.html'"> <!-- Updated link here -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="nav-icon" fill="#1e3a8a">
+                    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+                </svg>
+                <span style="color: #1e3a8a;">Profile Settings</span>
+            </div>
+        </div>  
+    </body>
+</html>
